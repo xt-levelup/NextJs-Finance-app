@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-server": "json-server --watch db.json --port 3100"
   },
   "dependencies": {
+    "json-server": "^1.0.0-beta.3",
     "lucide-react": "^0.469.0",
     "next": "15.1.2",
     "react": "^19.0.0",
+    "react-cookie": "^7.2.2",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
