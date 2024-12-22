@@ -3,6 +3,8 @@ import Input from "@/components/input";
 import Label from "@/components/label";
 import PageHeader from "@/components/page-header";
 import Select from "@/components/select";
+import Separator from "@/components/separator";
+import Skeleton from "@/components/skeleton";
 import TransactionItem from "@/components/transaction-item";
 import TransactionSummaryItem from "@/components/transaction-summary-item";
 import Trend from "@/components/trend";
@@ -13,14 +15,14 @@ export default function Page() {
       <h1 className="text-4xl mt-8">Playground</h1>
       <div>
         <h2 className="mb-4 text-lg font-mono">PageHeader</h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div>
           <PageHeader />
         </div>
       </div>
       <div>
         <h2 className="mb-4 text-lg font-mono">Trend</h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div className="flex space-x-8">
           <Trend type="Income" amount={1000} prevAmount={900} />
           <Trend type="Expense" amount={12000} prevAmount={10000} />
@@ -30,7 +32,7 @@ export default function Page() {
       </div>
       <div>
         <h2 className="mb-4 text-lg font-mono">TransactionItem</h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div className="space-y-4">
           <TransactionItem type="Income" description="Salary" amount={2000} />
           <TransactionItem
@@ -55,10 +57,10 @@ export default function Page() {
         <h2 className="mb-4 text-lg font-mono">
           TransactionSummaryItem + TransactionItem
         </h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div className="space-y-4">
           <TransactionSummaryItem date="2024-12-21" amount={3500} />
-          <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+          <Separator />
           <TransactionItem type="Income" description="Salary" amount={2000} />
           <TransactionItem
             type="Expense"
@@ -80,7 +82,7 @@ export default function Page() {
       </div>
       <div>
         <h2 className="mb-4 text-lg font-mono">Buttons</h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div className="space-x-4">
           <Button>Hello</Button>
           <Button variant="outline">Hello</Button>
@@ -92,7 +94,7 @@ export default function Page() {
       </div>
       <div>
         <h2 className="mb-4 text-lg font-mono">Forms</h2>
-        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <Separator />
         <div className="grid grid-cols-2 gap-4">
           <div>
             <Label className="mb-1">Your name</Label>
@@ -111,6 +113,22 @@ export default function Page() {
             <Label className="ml-2" htmlFor="terms">
               Accept terms
             </Label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="mb-4 text-lg font-mono">Loading Skeleton</h2>
+        <Separator />
+        <div className="space-y-8">
+          <div className="flex space-x-4">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+          <div className="space-y-4">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
           </div>
         </div>
       </div>
