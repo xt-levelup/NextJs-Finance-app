@@ -31,6 +31,38 @@
       "description": "Rent",
       "category": "Housing",
       "created_at": "2024-05-10T23:00:00"
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 6,
+      "description": "fghdhfh",
+      "created_at": "2024-12-23T00:00:00",
+      "id": 5
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 6,
+      "description": "fghdhfh",
+      "created_at": "2024-12-23T00:00:00",
+      "id": 6
+    },
+    {
+      "type": "Expense",
+      "category": "Transport",
+      "amount": 900,
+      "description": "adasda",
+      "created_at": "2024-12-23T00:00:00",
+      "id": 7
+    },
+    {
+      "type": "Investment",
+      "category": "Housing",
+      "amount": 90000,
+      "description": "In The Future",
+      "created_at": "2024-12-23T00:00:00",
+      "id": 8
     }
   ],
   "trends": [
