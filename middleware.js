@@ -1,6 +1,17 @@
 import { updateSession } from "@/lib/supabase/middleware";
+import { createClient } from "./lib/supabase/server";
 
 export async function middleware(request) {
+  const client = await createClient();
+  const {
+    data: { user },
+  } = await client.auth.getUser();
+  if (!user && request.nextUrl.pathname.startsWith("/dashboard")) {
+    return Response.redirect(new URL("/login", request.url));
+  }
+  if (user && request.nextUrl.pathname.startsWith("/login")) {
+    return Response.redirect(new URL("/dashboard", request.url));
+  }
   // update user's auth session
   return await updateSession(request);
 }
