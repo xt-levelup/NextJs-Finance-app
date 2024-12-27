@@ -2,9 +2,10 @@ import Link from "next/link";
 import DarkModeToggle from "./dark-mode-toggle";
 import getServerDarkMode from "@/hooks/use-server-dark-mode";
 import { createClient } from "@/lib/supabase/server";
-import { CircleUser, KeyRound } from "lucide-react";
+import { KeyRound } from "lucide-react";
 import { sizes, variants } from "@/lib/variants";
 import SignOutButton from "./sign-out-button";
+import Avatar from "./avatar";
 
 // Có thay đổi về getServerDarkMode vì lỗi await
 export default async function PageHeader({ className }) {
@@ -32,7 +33,7 @@ export default async function PageHeader({ className }) {
             href="/dashboard/settings"
             className={`flex items-center space-x-1 ${variants["ghost"]} ${sizes["sm"]}`}
           >
-            <CircleUser className="w-6 h-6" />
+            <Avatar />
             <span>{user?.email}</span>
           </Link>
         )}
