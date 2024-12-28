@@ -16,8 +16,6 @@ export default async function PageHeader({ className }) {
     error,
   } = await supabase.auth.getUser();
 
-  console.log(user);
-
   return (
     <header className={`flex justify-between items-center ${className}`}>
       <Link
@@ -34,7 +32,7 @@ export default async function PageHeader({ className }) {
             className={`flex items-center space-x-1 ${variants["ghost"]} ${sizes["sm"]}`}
           >
             <Avatar />
-            <span>{user?.email}</span>
+            <span>{user?.user_metadata?.fullName ?? user?.email}</span>
           </Link>
         )}
 

@@ -1,3 +1,4 @@
+"use client";
 import { deleteTransaction } from "@/lib/actions";
 import { X, Loader } from "lucide-react";
 import { useState } from "react";

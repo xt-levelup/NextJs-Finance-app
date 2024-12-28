@@ -1,6 +1,6 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "editor.fontWeight": "bold",
+  "editor.fontWeight": "normal",
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 80
 }
